@@ -2,43 +2,100 @@
 
 /* STEP 1: Named Selector
 ------------------------------------------------------- */
+h2{
+    color:red;
+    font-weight:normal;
+}
 
-
-/* STEP 2: ID Selector
+/* STEP 2: ID Selector #
 ------------------------------------------------------- */
+#step2{
+    color: blue;
+}
 
-
-/* STEP 3: Class Selector
+/* STEP 3: Class Selector .
 ------------------------------------------------------- */
+.project{
+    background-color:lightgrey;
+}
+.about{
+    border:5px dashed black;
+}
 
-
-/* STEP 4: Contextual/Descendent Selector
+/* STEP 4: Contextual/Descendent Selector e.g. section h1
 ------------------------------------------------------- */
-
-
-/* STEP 5: Grouped Selector
+section p{
+    color:cyan;
+}
+.about p a{
+    background-color: black;
+}
+/* STEP 5: Grouped Selector e.g. h1, h2, h3
 ------------------------------------------------------- */
+h1, h2, h3{
+    font-family:sans-serif;
+}
 
-
-/* STEP 6: Pseudo-Class Selector
+/* STEP 6: Pseudo-Class Selector e.g. a:link, a:hover, a:visited, i.e. a state
 ------------------------------------------------------- */
+a:link{
+    text-decoration:none;
+    color:lightsalmon;
+}
+a:visited{
+    color:green;
+}
+a:focus{
+    background-color:yellow;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    text-transform:uppercase;
+}
 
-
-/* STEP 7: Structural Pseudo-Class Selector
+/* STEP 7: Structural Pseudo-Class Selector i.e. nth-child, 
+e.g. 
+li:nth-child(4)  i.e. the 4th
+li:nth-child(4n) i.e. every 4 items e.g. 4th, 8th, 12th...
+li:nth-child(4n+1) i.e. every 4 items offset by 1 e.g. 5th, 9th, 13th...
+li:nth-child(odd) i.e. every odd indexed item
 ------------------------------------------------------- */
+li:nth-child(3n-1){
+    background-color:orange;
+}
 
-
-/* STEP 8: Pseudo-Element Selector
+/* STEP 8: Pseudo-Element Selector 
+e.g. Pseudo classes: h2:first-child, h2:last-child, h2:only-child, td:empty, *:not(a) i.e. any element not an anchor (a),
+e.g. Pseudo elements: p::first-line, p::first-letter, h1::before, h1::after
 ------------------------------------------------------- */
+p::first-line{
+    color:blue;
+}
+p::first-letter{
+    color:red;
+}
 
-
-/* STEP 9: Combinator Selector
+/* STEP 9: Combinator Selector e.g. body > p i.e. directly after
+e.g. h2 + p i.e. adjacent sibling, any element p that immediately follows h2 
+e.g. h2 ~ p i.e. general sibling, any element p that follows (or maybe) on the same level as h2
 ------------------------------------------------------- */
+h1 + p{
+    font-weight:bold;
+}
 
-
-/* STEP 10: Attribute Selector
+/* STEP 10: Attribute Selector e.g. a[href*="georgiancollege"] i.e. any a href that = "georgiancollege"
+e.g. a[href$=".pdf"] i.e. any a href that ends in ".pdf"
+e.g. label[class~="error"] i.e. any class that contains "error"
 ------------------------------------------------------- */
-
+*[lang="es"]{
+    background-color:lavender;
+}
 
 /* STEP 11: Getting Crazy
 ------------------------------------------------------- */
+.project h2[lang="es"] + p em{
+    text-decoration:overline;
+
+}
