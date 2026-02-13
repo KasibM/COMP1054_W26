@@ -1,70 +1,85 @@
 @charset "UTF-8";
 
 html{
+    /* background colour and vignette */
     background-color: rgb(28, 39, 47);
     box-shadow: inset 0px 0px 400px rgb(1, 2, 2);
     background-size: cover;
     /* default font colour*/
-    color: rgb(214,83,79);
-
+    color: rgba(230, 96, 34, 0.85);
 }
-h1, h2 {
-    line-height: 0;
-}
-h1{
+header h1{
     font-size: 4.8rem;
 }
-h2{
-
+header h2{
+    font-size: 2.4rem;
 }
 
 body{
     margin: 20% 10% ;
-    min-height: 80rem;
-    display: grid;
-    grid-auto-rows: 30%;
 }
 
-header{
+header, main section, main section + aside {
+    
+    background-color: rgb(0,0,0);
 
-}
+    /* box sizing and spacing  */
+    padding: 3rem;
+    margin-top: 3rem;
+    
 
-main{
+    /* orange and light blue glow */
+    box-shadow: 
+        2px 8px 12px rgba(230, 96, 34, 0.295),
+        -2px -2px 30px rgba(57, 78, 95, 0.8);
+    /* subtle round corner */
+    border-radius: 0.4rem; 
     
     
 }
 
-header .floating-box{
-    columns: 3 275px;
+header {
+    color: rgb(214,83,79);
+
+    display:flex;
+
+    margin-top:0;
+    height: 4rem;
+    padding: 4rem 4rem 8rem 4rem;
 }
 
-#title{
-    width: 600px;
+header aside{
+    position:relative;
+    top:40px;
+    line-height: 0;
+    padding-left:2rem;
+
+    width: auto;
     text-transform: uppercase;
-
+    
 }
 
-header .floating-box img{
+header img{
     width: 275px;
     height: 275px;
 
     position: relative;
-    top: -100%;
+    top: -125px;
     
     
     border-radius: 0.2rem; 
 
+    margin-bottom: 0;
 }
 
-.floating-box{
-    
-    background-color: rgb(0,0,0);
-
-    padding: 5% 5% 10% 5%;
-    height: 30%;
-
-    box-shadow: 2px 8px 12px rgba(230, 96, 34, 0.295),
-                -2px -2px 30px rgba(57, 78, 95, 0.8);
-                border-radius: 0.4rem; 
-    
+main > div {
+    display: flex;
+}
+main section {
+    flex-grow: 1;
+    margin-right: 1.125rem;
+}
+main section + aside {
+    flex-grow: 1;
+    margin-left: 1.125rem;
 }
