@@ -1,10 +1,12 @@
 @charset "UTF-8";
 @media screen and (max-width: 1200px){
     html{
+        /* wouldn't move with the screen properly */
         box-shadow: none;
     }
 
-    header h1{
+    h1{
+        /* larger font at this screen size causes stacking */
         font-size: 2.7rem;
     }
 
@@ -17,6 +19,7 @@
     }
 
     header img{
+        /* small screens pushed the album cover around, this makes it look better */
         position: static;
         
 
@@ -25,6 +28,7 @@
         
     }
     header aside{
+        /* small line height caused overlap */
         width:100%;
         line-height:0.2rem;
         
@@ -32,15 +36,17 @@
     }
 
     header{
+        /* album art tries to escape on small screens */
         min-height: fit-content;
-        min-width: 80%;
+        /* resets standard padding size for these boxes on small screens */
         padding: 3rem;
         
     }
 
 }
 @media screen and (max-width: 730px){
-    header h1{
+    h1{
+        /* larger font at this screen size causes stacking */
         font-size: 2.3rem;
     }
 
@@ -52,6 +58,7 @@
         font-size: 1.4rem;
     }
     header aside{
+        /* small line height caused overlap */
         line-height:0.4rem;
     }
 }
