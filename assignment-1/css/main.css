@@ -7,17 +7,25 @@ html{
     color: rgb(214,83,79);
 
 }
+h1, h2 {
+    line-height: 0;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+
+}
 
 body{
     margin: 20% 10% ;
     min-height: 80rem;
-    box-shadow: 100px yellow;
     display: grid;
     grid-auto-rows: 30%;
 }
 
 header{
-    
+
 }
 
 main{
@@ -26,14 +34,21 @@ main{
 }
 
 header .floating-box{
+     
     
+    columns: 3 275px;
     
+
+}
+#title{
+    position:relative;
+    width: 600px;
 
 }
 
 header .floating-box img{
     width: 275px;
-    height: auto;
+    height: 275px;
     position: relative;
     top: -100%;
 }
