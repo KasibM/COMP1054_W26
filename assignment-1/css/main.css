@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 html{
-    background-color: rgb(23, 30, 34);
+    background-color: rgb(28, 39, 47);
+    box-shadow: inset 0px 0px 400px rgb(1, 2, 2);
     background-size: cover;
     /* default font colour*/
     color: rgb(214,83,79);
@@ -34,28 +35,36 @@ main{
 }
 
 header .floating-box{
-     
-    
     columns: 3 275px;
-    
-
 }
+
 #title{
-    position:relative;
     width: 600px;
+    text-transform: uppercase;
 
 }
 
 header .floating-box img{
     width: 275px;
     height: 275px;
+
     position: relative;
     top: -100%;
+    
+    
+    border-radius: 0.2rem; 
+
 }
 
 .floating-box{
-    position: relative;
+    
     background-color: rgb(0,0,0);
+
     padding: 5% 5% 10% 5%;
     height: 30%;
+
+    box-shadow: 2px 8px 12px rgba(230, 96, 34, 0.295),
+                -2px -2px 30px rgba(57, 78, 95, 0.8);
+                border-radius: 0.4rem; 
+    
 }
