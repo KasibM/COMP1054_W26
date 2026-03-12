@@ -22,6 +22,31 @@ img{
     height:auto;
 }
 
+/* Flex */
+
+article{
+    width:100%;
+    max-height:1100px;
+    display:flex;
+    flex-flow: column wrap;
+    column-gap:15px
+}
+
+article h2:first-of-type, article p:first-of-type{
+    text-align: center;
+    width: 480px
+}
+
+article :nth-child(n+4){
+    width: 300px;
+}
+
+article :nth-child(4), article :nth-child(5){
+    float:right;
+    width: 230px;
+    color: blue;
+}
+
 
 
 
@@ -29,7 +54,7 @@ img{
 
 /* html default text */
 html{
-    size: 16px;
+    font-size: 16px;
 
 }
 
@@ -41,12 +66,14 @@ h1{
 
 /* subtittles */
 h2{
+    font-size: 12px; 
 
 }
 
 /* The road well travelled first subtitle  */
 h2:first-of-type{
-
+    font-size: 42px;
+    margin-block:20px 5px; 
 }
 
 /* Hunter Harrison */
@@ -56,12 +83,12 @@ strong{
 
 /* article paragraphs */
 article p{
-
+    font-size: 14px;
 }
 
 /* Life of Hunter Harrison first paragraph in article*/
 article p:first-of-type{
-
+    font-size: 16px;
 }
 
 /* Canadian National Abbreviations */
