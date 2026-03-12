@@ -1,1 +1,68 @@
 @charset "utf-8";
+
+
+
+
+
+/* Text formatting */
+
+/* html default text */
+html{
+
+
+}
+
+/*EXIT INTERVIEW*/
+h1{
+
+}
+
+/* subtittles */
+h2{
+
+}
+
+/* The road well travelled first subtitle  */
+h2:first-of-type{
+
+}
+
+/* Hunter Harrison */
+strong{
+
+}
+
+/* article paragraphs */
+article p{
+
+}
+
+/* Life of Hunter Harrison first paragraph in article*/
+article p:first-of-type{
+
+}
+
+/* Canadian National Abbreviations */
+abbr{
+
+}
+
+/* quotation */
+q{
+
+}
+
+/* 64 JANUARY 2020 REPORT ON BUSINESS footer text */
+footer{
+
+}
+
+/* 64 page number */
+em{
+
+}
+
+/* timestamp */
+time{
+
+}
