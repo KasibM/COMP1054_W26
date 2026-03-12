@@ -1,6 +1,27 @@
 @charset "utf-8";
 
+/* Section and Image Layout */
+html{
+    display: flex;
+    justify-content:center;
+    padding: 50px 100px;
+    overflow-x: scroll;
+}
+body{
+    min-width: 1650px;
+    width: 1650px;
+    min-height: 2150px;
+    height: 2150px;
+    border: 1px solid black;
 
+    padding: 40px 100px;
+
+}
+
+img{
+    width:960px;
+    height:auto;
+}
 
 
 
