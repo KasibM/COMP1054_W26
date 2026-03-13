@@ -90,9 +90,11 @@ h1{
     width:fit-content;
     border-left: 1px solid rgba(0,0,0,0.5);
     border-right: 1px solid rgba(0,0,0,0.5);
+
+    font-weight:900;
 }
 
-/* subtittles */
+/* subtitles */
 h2{
     font-size: 12px; 
     margin-block: 0px;
@@ -102,6 +104,13 @@ h2{
 h2:first-of-type{
     font-size: 42px;
     margin-block:20px 5px; 
+
+    /* to change text to title case pt 1/2 */
+    text-transform:lowercase;
+}
+h2::first-letter{
+    /* to change text to title case pt 2/2 */
+    text-transform:uppercase;
 }
 
 /* Hunter Harrison */
