@@ -9,6 +9,11 @@ html{
     filter: saturate(80%);
     filter:sepia(20%);
 }
+@media screen and (max-width: 1200px){
+    html{
+        margin-left: 400px;
+    }
+}
 body{
     min-width: 825px;
     width: 825px;
