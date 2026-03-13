@@ -13,37 +13,48 @@ body{
     min-height: 1100px;
     height: 1100px;
     border: 1px solid black;
-
     padding: 20px 50px;
 
 }
 img{
     width:480px;
     height:auto;
+    float:left
+
 }
 
-/* Flex */
 
+ /* Column Layout */
 article{
     width:100%;
+    height:1100px;
     max-height:1100px;
-    display:flex;
-    flex-flow: column wrap;
-    column-gap:15px
+    columns: 3;
+    column-gap:20px;
+    
+    
 }
-
+img{
+    
+}
+/* Road well travelled, bio  */
 article h2:first-of-type, article p:first-of-type{
     text-align: center;
-    width: 480px
-}
+    width: 480px;
 
+
+}
+/* paragraphs after bio in article */
 article :nth-child(n+4){
-    width: 300px;
+    color:darkgreen;
 }
-
+/* h2 and p set 1 after bio */
 article :nth-child(4), article :nth-child(5){
-    float:right;
-    width: 230px;
+    
+    color: blue;
+}
+/* h2 and p set 2 after bio */
+article :nth-child(6), article :nth-child(7){
     color: blue;
 }
 
@@ -67,7 +78,7 @@ h1{
 /* subtittles */
 h2{
     font-size: 12px; 
-
+    margin-block: 0px;
 }
 
 /* The road well travelled first subtitle  */
@@ -84,11 +95,13 @@ strong{
 /* article paragraphs */
 article p{
     font-size: 14px;
+    margin-block: 0px;
 }
 
 /* Life of Hunter Harrison first paragraph in article*/
 article p:first-of-type{
     font-size: 16px;
+    margin-block: 0px 20px;
 }
 
 /* Canadian National Abbreviations */
