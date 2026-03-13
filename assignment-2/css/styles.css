@@ -31,11 +31,16 @@ article{
     max-height:1100px;
     columns: 3;
     column-gap:20px;
+    display:flex;
+    flex-flow:column wrap;
     
     
 }
 img{
     
+}
+article * {
+    /* border: 1px solid black; */
 }
 /* Road well travelled, bio  */
 article h2:first-of-type, article p:first-of-type{
@@ -46,17 +51,20 @@ article h2:first-of-type, article p:first-of-type{
 }
 /* paragraphs after bio in article */
 article :nth-child(n+4){
-    color:darkgreen;
+    width: 325px;
+    /* color:darkgreen; */
 }
 /* h2 and p set 1 after bio */
 article :nth-child(4), article :nth-child(5){
-    
-    color: blue;
+    width: 230px;
+    /* color: blue; */
 }
 /* h2 and p set 2 after bio */
 article :nth-child(6), article :nth-child(7){
-    color: blue;
+    width:230px;
+    /* color: blue; */
 }
+
 
 
 
