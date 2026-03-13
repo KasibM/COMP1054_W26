@@ -19,7 +19,7 @@ body{
 img{
     width:480px;
     height:auto;
-    float:left
+    float:left;
 
 }
 
@@ -31,7 +31,7 @@ article{
     max-height:1100px;
     columns: 3;
     column-gap:20px;
-    display:flex;
+    display: flex;
     flex-flow:column wrap;
     
     
@@ -46,7 +46,6 @@ article h2:first-of-type, article p:first-of-type{
 /* paragraphs after bio in article */
 article :nth-child(n+4){
     max-width: 230px;
-    width:fit-content;
     /* color:darkgreen; */
     
 }
