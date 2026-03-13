@@ -154,14 +154,17 @@ q{
 footer{
     /* all caps */
     text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size: 12px;
 }
 
 /* 64 page number */
 em{
-
+    font-style:normal;
 }
 
 /* timestamp */
 time{
-
+    font-weight:400;
 }
