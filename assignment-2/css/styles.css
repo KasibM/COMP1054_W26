@@ -36,37 +36,26 @@ article{
     
     
 }
-img{
-    
-}
-article * {
-    /* border: 1px solid black; */
-}
+
 /* Road well travelled, bio  */
 article h2:first-of-type, article p:first-of-type{
     text-align: center;
     width: 480px;
 
-
 }
 /* paragraphs after bio in article */
 article :nth-child(n+4){
-    width: 325px;
+    max-width: 230px;
+    width:fit-content;
+    /* color:darkgreen; */
+    
+}
+
+ /* paragraphs after left paragraphs */
+article :nth-child(n+8){
+    max-width:325px;
     /* color:darkgreen; */
 }
-/* h2 and p set 1 after bio */
-article :nth-child(4), article :nth-child(5){
-    width: 230px;
-    /* color: blue; */
-}
-/* h2 and p set 2 after bio */
-article :nth-child(6), article :nth-child(7){
-    width:230px;
-    /* color: blue; */
-}
-
-
-
 
 
 /* Text formatting */
