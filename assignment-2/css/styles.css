@@ -6,6 +6,8 @@ html{
     justify-content:center;
     padding: 50px 100px;
     overflow-x: scroll;
+    filter: saturate(80%);
+    filter:sepia(20%);
 }
 body{
     min-width: 825px;
