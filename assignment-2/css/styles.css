@@ -79,8 +79,17 @@ html{
 
 /*EXIT INTERVIEW*/
 h1{
+    font-size: 16px;
     color: rgb(255, 152, 79);
+    
+    /* all caps */
     text-transform: uppercase;
+
+    /* little lines around */
+    padding:0px 5px;
+    width:fit-content;
+    border-left: 1px solid rgba(0,0,0,0.5);
+    border-right: 1px solid rgba(0,0,0,0.5);
 }
 
 /* subtittles */
@@ -124,6 +133,7 @@ q{
 
 /* 64 JANUARY 2020 REPORT ON BUSINESS footer text */
 footer{
+    /* all caps */
     text-transform: uppercase;
 }
 
