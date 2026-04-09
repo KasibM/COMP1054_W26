@@ -1,0 +1,108 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Box-sizing reset (https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/) */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+html {
+	font-family: "Open Sans", sans-serif;
+}
+header, footer{
+	margin-left:20px;
+}
+#container {
+	width: 80%;
+}
+
+/* Display tabs side by side, with no space between tabs and tabpanels */
+ul[role="tablist"]{
+	display: flex;
+	margin-bottom:0;
+}
+
+/* Tab anchor text black, bold, no underline, padding added to make a bigger clickable area */
+li[role="tab"] a {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0.5rem;
+}
+
+/* Remove list marker */
+li[role="tab"]::marker{
+	content:none;
+}
+/* Base tab format */
+li[role="tab"]{
+	margin-right:0.25rem;
+	border-radius: 0.5rem 0.5rem 0 0;
+	background-color:lightgrey;
+	padding:0.5rem 0rem;
+	cursor: pointer;
+}
+/* When no target specified, display first tab as if target */
+li[role="tab"]:first-of-type{
+	border: 0.15rem solid black;
+	border-bottom: 0.15rem solid white;
+	background-color:white;
+	z-index:5;
+}
+/* In list items where div.tabs has a target (when target selected) level (reformat all) tabs */
+div.tabs:has(:target) li[role="tab"]{
+	background-color:lightgrey;
+	border: none;
+	z-index:0;
+}
+/* In list item that has href="tabpanel#", when tabpanel1 2 or 3 is target display related anchor as target tab  */
+div.tabs:has(div#tabpanel1:target) li:has(a[href="#tabpanel1"]){
+	border: 0.15rem solid black;
+	border-bottom: 0.15rem solid white;
+	background-color:white;
+	z-index:5;
+}
+div.tabs:has(div#tabpanel2:target) li:has(a[href="#tabpanel2"]){
+	border: 0.15rem solid black;
+	border-bottom: 0.15rem solid white;
+	background-color:white;
+	z-index:5;
+}
+div.tabs:has(div#tabpanel3:target) li:has(a[href="#tabpanel3"]){
+	border: 0.15rem solid black;
+	border-bottom: 0.15rem solid white;
+	background-color:white;
+	z-index:5;
+}
+
+/* Base tabpanel format  */
+div[role="tabpanel"]{
+	border: 0.15rem solid black;
+	/* background-color: blue; */
+	display: none;
+	margin-left: 40px;
+	padding: 0rem 0.8rem;
+	position:relative;
+	top: -0.14rem;
+}
+/* When target not chosen display first tabpanel as target  */
+div[role="tabpanel"]:first-of-type{
+	/* background-color: green; */
+	display: block;
+}
+/* When div.tabs has a target selected level (hide all) tabpanels  */
+div.tabs:has(:target) div[role="tabpanel"] {
+	/* background-color: blue; */
+	display: none;
+}
+/* When div.tabs has a target selected display target as target tabpanel  */
+div.tabs:has(:target) div[role="tabpanel"]:target{
+	/* background-color: green; */
+	display: block;
+}
+
+
+
+
