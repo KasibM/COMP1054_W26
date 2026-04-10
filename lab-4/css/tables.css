@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+html {
+    font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding:10rem;
+}
+/* Collapse borders*/
+table {
+border-collapse: collapse;
+}
+/* Row and header height */
+tr, th {
+    table-layout: fixed;
+    height: 3rem;
+}
+/* Header white, borders, align centere  */
+th {
+    background: rgb(255, 255, 255);
+
+    border-top:1px solid rgb(219, 219, 219);
+    border-bottom:1px solid rgb(219, 219, 219);
+    
+    text-align: center;
+}
+td{
+    border-bottom: 1px solid rgb(219, 219, 219);
+    text-align: center;
+}
+
+/* Zebra striping on rows */
+tr:nth-child(2n+1) {
+    background: rgb(245, 244, 244);
+}
+
+/* Second column left align  */
+tr :nth-child(2){
+    text-align:left;
+}
+/* Column group widths */
+colgroup:nth-of-type(1){
+    width:4rem;
+}
+colgroup:nth-of-type(2){
+    width:15rem;
+}
+colgroup:nth-of-type(3),colgroup:nth-of-type(5),colgroup:nth-of-type(7){
+    width:3rem;
+}
+colgroup:nth-of-type(4), colgroup:nth-of-type(6){
+    width:5rem;
+}
+
+
+
+
+/* Footer font size */
+tfoot td {
+    font-size: 60%;
+}
+
+/* Heading font size, weight and alignment  */
+caption {
+    font-size: 150%;
+    text-align: left;
+    font-weight: bold;
+}
