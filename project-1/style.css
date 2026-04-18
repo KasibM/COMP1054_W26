@@ -1,17 +1,58 @@
 @charset "UTF-8";
 
 html * {
+  box-sizing: border-box;
   border: solid black 1px;
+
+
 }
 svg{
   width:10px;
   height:auto;
 }
 
+
+/* Positioning and movement */
 body{
   display: grid;
-  grid-template-columns: 10% 45% 45%;
+  grid-template-areas: 
+  "a a a a a"
+  "b c c c d"
+  "e c c c d"
+  "e c c c d"
+  "e c c c f"
+  "e g g g g";
+
 }
+body > a {
+  grid-area: b;
+
+  height: fit-content;
+}
+header {
+  grid-area: a;
+}
+nav {
+  grid-area: e;
+}
+main {
+  grid-area: c;
+}
+aside .profile{
+  grid-area: d;
+
+  position: sticky;
+  top: 20vh;
+}
+aside #styles {
+  grid-area: f;
+
+}
+footer {
+  grid-area: g;
+}
+
 nav ul {
-  height: 100%;
+  position: fixed;
+  top: 40vh;
 }
