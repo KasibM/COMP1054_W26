@@ -31,20 +31,22 @@ body > a {
 }
 header {
   grid-area: a;
+  margin-bottom: 2rem;
 }
 nav {
   grid-area: e;
 }
 main {
   grid-area: c;
+  margin: 0 2rem;
 }
-aside .profile{
+aside.profile{
   grid-area: d;
 
   position: sticky;
   top: 20vh;
 }
-aside #styles {
+aside#styles {
   grid-area: f;
 
 }
