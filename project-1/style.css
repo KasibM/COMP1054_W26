@@ -126,6 +126,8 @@ nav ul, footer ul{
   padding: 0;
   line-height:220%;
 }
+
+/* Small screens */
 @media screen and (max-width: 999px){
   header h1 {
     font-size: 500%;
@@ -150,6 +152,7 @@ nav ul, footer ul{
     margin: 1rem 0rem;
   }
 }
+/* Large Screens */
 @media screen and (min-width: 1000px){
   /* Positioning and movement */
   body{
