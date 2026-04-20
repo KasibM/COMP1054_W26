@@ -10,6 +10,8 @@ html {
   color:#FDE5D4;
 }
 svg{
+  /* https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element */
+  fill: #FDE5D4;
   width:10px;
   height:auto;
 }
@@ -20,18 +22,23 @@ svg{
 body{
   display: grid;
   grid-template-areas: 
-  "a a a a a"
-  "b c c c d"
-  "e c c c d"
-  "e c c c ."
-  "e c c c f"
-  "g g g g g";
+  "a"
+  "b"
+  "d"
+  "f"
+  "e"
+  "c"
+  "g";
 
 }
 body > a {
   grid-area: b;
 
   height: fit-content;
+
+  font-size: 150%;
+
+  text-align: center;
 }
 header {
   grid-area: a;
@@ -45,59 +52,48 @@ main {
 aside.profile{
   grid-area: d;
 
-  position: sticky;
-  top: 20vh;
-
   height: fit-content;
  
 }
 aside#styles {
   grid-area: f;
+  height: fit-content;
 }
 footer {
   grid-area: g;
 }
-nav {
-  position: fixed;
-  top: 35vh;
-}
+
 
 /* Spacing (Margins and Padding) */
 header .container {
   margin-bottom: 2rem;
-  padding-left: 4rem;
   padding-bottom: 1.75rem;
   padding-top: 0.25rem;
 }
 header h1 {
-  padding-left: 4rem;
+  padding-left: 2rem;
   font-size: 250%;
 }
 header h2 {
-  padding-left: 8rem;
+  padding-left: 0.5rem;
 }
 header p {
-  padding-left: 12rem;
+  padding-left: 0.5rem;
 }
 header .link-github {
-  padding-left: 12rem; 
+  padding-left: 0.5rem; 
 }
 body > a{
-  padding-left: 3rem;
-}
-nav {
-  margin-left: 2.5rem;
-  padding-right: 2rem;
+  padding-left: 0.5rem;
 }
 main {
-  margin: 0 2rem;
   padding:  1rem 3rem;
 }
 main section {
   margin-bottom: 5rem;
 }
 aside#styles{
-  padding-top: 40rem;
+  padding-top: 0rem;
 }
 a {
   color: #93a186;
@@ -130,7 +126,89 @@ nav ul, footer ul{
   padding: 0;
   line-height:220%;
 }
-nav ul{
-  padding-left:5rem;
-  text-align:right;
+@media screen and (max-width: 999px){
+  header h1 {
+    font-size: 500%;
+    padding-left: 0;
+    text-align: center;
+  }
+  aside.profile, aside#styles {
+    margin: 1rem 0.5rem;
+    padding-bottom: 1.75rem;
+    padding-top: 0.25rem;
+    padding-left: 0.5rem;
+
+    border-radius: 1rem;
+    background-color: rgb(21 35 5);
+    
+  }
+  nav ul{
+    text-align: center;
+  }
+  nav li{
+    font-size: 110%;
+    margin: 1rem 0rem;
+  }
+}
+@media screen and (min-width: 1000px){
+  /* Positioning and movement */
+  body{
+    display: grid;
+    grid-template-areas: 
+    "a a a a a"
+    "b c c c d"
+    "e c c c d"
+    "e c c c ."
+    "e c c c f"
+    "g g g g g";
+  }
+  body > a {
+    height: fit-content;
+    font-size: 100%;
+  }
+  aside.profile{
+    position: sticky;
+    top: 20vh;
+  }
+  nav {
+    position: fixed;
+    top: 35vh;
+  }
+
+  /* Spacing (Margins and Padding) */
+  header .container {
+    padding-left: 4rem;
+  }
+  header h1 {
+    padding-left: 4rem;
+  }
+  header h2 {
+    padding-left: 8rem;
+  }
+  header p {
+    padding-left: 12rem;
+  }
+  header .link-github {
+    padding-left: 12rem; 
+  }
+  body > a{
+    padding-left: 3rem;
+  }
+  nav {
+    margin-left: 2.5rem;
+  }
+  main {
+    margin: 0 2rem;
+    padding:  1rem 3rem;
+  }
+  aside#styles{
+    padding-top: 40rem;
+  }
+
+  /* List Styles */
+  nav ul{
+    padding-left: 5rem;
+    text-align: right;
+  }
+  
 }
