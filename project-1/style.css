@@ -2,14 +2,18 @@
 
 html * {
   box-sizing: border-box;
-  border: solid black 1px;
-
-
+  /* border: solid white 1px; */
+  
+}
+html {
+  background-color: #5E3023;
+  color:#FDE5D4;
 }
 svg{
   width:10px;
   height:auto;
 }
+
 
 
 /* Positioning and movement */
@@ -19,9 +23,9 @@ body{
   "a a a a a"
   "b c c c d"
   "e c c c d"
-  "e c c c d"
+  "e c c c ."
   "e c c c f"
-  "e g g g g";
+  "g g g g g";
 
 }
 body > a {
@@ -31,30 +35,102 @@ body > a {
 }
 header {
   grid-area: a;
-  margin-bottom: 2rem;
 }
 nav {
   grid-area: e;
 }
 main {
   grid-area: c;
-  margin: 0 2rem;
 }
 aside.profile{
   grid-area: d;
 
   position: sticky;
   top: 20vh;
+
+  height: fit-content;
+ 
 }
 aside#styles {
   grid-area: f;
-
 }
 footer {
   grid-area: g;
 }
-
-nav ul {
+nav {
   position: fixed;
-  top: 40vh;
+  top: 35vh;
+}
+
+/* Spacing (Margins and Padding) */
+header .container {
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  padding-bottom: 1.75rem;
+  padding-top: 0.25rem;
+}
+header h1 {
+  padding-left: 4rem;
+  font-size: 250%;
+}
+header h2 {
+  padding-left: 8rem;
+}
+header p {
+  padding-left: 12rem;
+}
+header .link-github {
+  padding-left: 12rem; 
+}
+body > a{
+  padding-left: 3rem;
+}
+nav {
+  margin-left: 2.5rem;
+  padding-right: 2rem;
+}
+main {
+  margin: 0 2rem;
+  padding:  1rem 3rem;
+}
+main section {
+  margin-bottom: 5rem;
+}
+aside#styles{
+  padding-top: 40rem;
+}
+a {
+  color: #93a186;
+  text-decoration: none;
+}
+a:hover {
+  color: #dcebd0;
+}
+main footer a{
+  padding: 0 1rem;
+}
+footer{
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  text-align:center;
+}
+
+/* Backplates  */
+header .container, main, footer{
+  /* border: solid 2px white; */
+  border-radius: 1rem;
+  background-color: rgb(21 35 5);
+
+}
+
+
+/* List styles */
+nav ul, footer ul{
+  list-style:none;
+  padding: 0;
+  line-height:220%;
+}
+nav ul{
+  padding-left:5rem;
+  text-align:right;
 }
